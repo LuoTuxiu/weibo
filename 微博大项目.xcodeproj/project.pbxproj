@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B5DABE51BAD15E0002529CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5DABE41BAD15E0002529CC /* main.m */; };
-		3B5DABE81BAD15E0002529CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5DABE71BAD15E0002529CC /* AppDelegate.m */; };
-		3B5DABEB1BAD15E0002529CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5DABEA1BAD15E0002529CC /* ViewController.m */; };
-		3B5DABEE1BAD15E0002529CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5DABEC1BAD15E0002529CC /* Main.storyboard */; };
 		3B5DABF01BAD15E0002529CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B5DABEF1BAD15E0002529CC /* Assets.xcassets */; };
 		3B5DABF31BAD15E0002529CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5DABF11BAD15E0002529CC /* LaunchScreen.storyboard */; };
 		3B5DABFE1BAD15E0002529CC /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5DABFD1BAD15E0002529CC /* _____Tests.m */; };
 		3B5DAC091BAD15E0002529CC /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5DAC081BAD15E0002529CC /* _____UITests.m */; };
+		3B5DAC1A1BAD49C7002529CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5DAC181BAD49C7002529CC /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		3B5DAC1B1BAD49C7002529CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5DAC191BAD49C7002529CC /* main.m */; settings = {ASSET_TAGS = (); }; };
+		3BD646291BAE43E400EE7801 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD646281BAE43E400EE7801 /* HomeTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3BD6462C1BAE43F800EE7801 /* MessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6462B1BAE43F800EE7801 /* MessageTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3BD6462F1BAE441100EE7801 /* DiscoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6462E1BAE441100EE7801 /* DiscoverTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3BD646321BAE441E00EE7801 /* ProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD646311BAE441E00EE7801 /* ProfileTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,12 +38,6 @@
 
 /* Begin PBXFileReference section */
 		3B5DABE01BAD15E0002529CC /* 微博大项目.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微博大项目.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B5DABE41BAD15E0002529CC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3B5DABE61BAD15E0002529CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		3B5DABE71BAD15E0002529CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3B5DABE91BAD15E0002529CC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3B5DABEA1BAD15E0002529CC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3B5DABED1BAD15E0002529CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B5DABEF1BAD15E0002529CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B5DABF21BAD15E0002529CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B5DABF41BAD15E0002529CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +47,18 @@
 		3B5DAC041BAD15E0002529CC /* 微博大项目UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "微博大项目UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5DAC081BAD15E0002529CC /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____UITests.m"; sourceTree = "<group>"; };
 		3B5DAC0A1BAD15E0002529CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B5DAC171BAD49C7002529CC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3B5DAC181BAD49C7002529CC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3B5DAC191BAD49C7002529CC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B5DAC1C1BAD4D40002529CC /* 微博大项目-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "微博大项目-Prefix.pch"; sourceTree = "<group>"; };
+		3BD646271BAE43E400EE7801 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
+		3BD646281BAE43E400EE7801 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
+		3BD6462A1BAE43F800EE7801 /* MessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewController.h; sourceTree = "<group>"; };
+		3BD6462B1BAE43F800EE7801 /* MessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewController.m; sourceTree = "<group>"; };
+		3BD6462D1BAE441100EE7801 /* DiscoverTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverTableViewController.h; sourceTree = "<group>"; };
+		3BD6462E1BAE441100EE7801 /* DiscoverTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverTableViewController.m; sourceTree = "<group>"; };
+		3BD646301BAE441E00EE7801 /* ProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileTableViewController.h; sourceTree = "<group>"; };
+		3BD646311BAE441E00EE7801 /* ProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +109,7 @@
 		3B5DABE21BAD15E0002529CC /* 微博大项目 */ = {
 			isa = PBXGroup;
 			children = (
-				3B5DABE61BAD15E0002529CC /* AppDelegate.h */,
-				3B5DABE71BAD15E0002529CC /* AppDelegate.m */,
-				3B5DABE91BAD15E0002529CC /* ViewController.h */,
-				3B5DABEA1BAD15E0002529CC /* ViewController.m */,
-				3B5DABEC1BAD15E0002529CC /* Main.storyboard */,
-				3B5DABEF1BAD15E0002529CC /* Assets.xcassets */,
-				3B5DABF11BAD15E0002529CC /* LaunchScreen.storyboard */,
-				3B5DABF41BAD15E0002529CC /* Info.plist */,
+				3B5DAC161BAD49C7002529CC /* Classes */,
 				3B5DABE31BAD15E0002529CC /* Supporting Files */,
 			);
 			path = "微博大项目";
@@ -117,7 +118,10 @@
 		3B5DABE31BAD15E0002529CC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3B5DABE41BAD15E0002529CC /* main.m */,
+				3B5DABEF1BAD15E0002529CC /* Assets.xcassets */,
+				3B5DABF11BAD15E0002529CC /* LaunchScreen.storyboard */,
+				3B5DABF41BAD15E0002529CC /* Info.plist */,
+				3B5DAC1C1BAD4D40002529CC /* 微博大项目-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +142,24 @@
 				3B5DAC0A1BAD15E0002529CC /* Info.plist */,
 			);
 			path = "微博大项目UITests";
+			sourceTree = "<group>";
+		};
+		3B5DAC161BAD49C7002529CC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3B5DAC171BAD49C7002529CC /* AppDelegate.h */,
+				3B5DAC181BAD49C7002529CC /* AppDelegate.m */,
+				3B5DAC191BAD49C7002529CC /* main.m */,
+				3BD646271BAE43E400EE7801 /* HomeTableViewController.h */,
+				3BD646281BAE43E400EE7801 /* HomeTableViewController.m */,
+				3BD6462A1BAE43F800EE7801 /* MessageTableViewController.h */,
+				3BD6462B1BAE43F800EE7801 /* MessageTableViewController.m */,
+				3BD6462D1BAE441100EE7801 /* DiscoverTableViewController.h */,
+				3BD6462E1BAE441100EE7801 /* DiscoverTableViewController.m */,
+				3BD646301BAE441E00EE7801 /* ProfileTableViewController.h */,
+				3BD646311BAE441E00EE7801 /* ProfileTableViewController.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,7 +267,6 @@
 			files = (
 				3B5DABF31BAD15E0002529CC /* LaunchScreen.storyboard in Resources */,
 				3B5DABF01BAD15E0002529CC /* Assets.xcassets in Resources */,
-				3B5DABEE1BAD15E0002529CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +291,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B5DABEB1BAD15E0002529CC /* ViewController.m in Sources */,
-				3B5DABE81BAD15E0002529CC /* AppDelegate.m in Sources */,
-				3B5DABE51BAD15E0002529CC /* main.m in Sources */,
+				3B5DAC1A1BAD49C7002529CC /* AppDelegate.m in Sources */,
+				3BD646291BAE43E400EE7801 /* HomeTableViewController.m in Sources */,
+				3BD6462F1BAE441100EE7801 /* DiscoverTableViewController.m in Sources */,
+				3BD646321BAE441E00EE7801 /* ProfileTableViewController.m in Sources */,
+				3B5DAC1B1BAD49C7002529CC /* main.m in Sources */,
+				3BD6462C1BAE43F800EE7801 /* MessageTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,14 +332,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3B5DABEC1BAD15E0002529CC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B5DABED1BAD15E0002529CC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3B5DABF11BAD15E0002529CC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -353,6 +369,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "微博大项目/微博大项目-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -394,6 +411,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "微博大项目/微博大项目-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -411,6 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "微博大项目/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.-----";
@@ -422,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "微博大项目/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.-----";
@@ -496,6 +516,7 @@
 				3B5DAC0F1BAD15E0002529CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B5DAC101BAD15E0002529CC /* Build configuration list for PBXNativeTarget "微博大项目Tests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +525,7 @@
 				3B5DAC121BAD15E0002529CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B5DAC131BAD15E0002529CC /* Build configuration list for PBXNativeTarget "微博大项目UITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +534,7 @@
 				3B5DAC151BAD15E0002529CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
