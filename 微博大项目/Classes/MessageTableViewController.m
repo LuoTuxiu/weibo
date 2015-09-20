@@ -7,7 +7,7 @@
 //
 
 #import "MessageTableViewController.h"
-
+#import "testViewController.h"
 @interface MessageTableViewController ()
 
 @end
@@ -31,25 +31,40 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return 20;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *ID = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    
+    if (cell == nil) {
+        cell =  [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+    }
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%d",indexPath.row];
     
     // Configure the cell...
     
     return cell;
 }
-*/
+
+
+#pragma mark - 代理方法
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    testViewController *test1=  [[testViewController alloc]init];
+    test1.title = @"测试1";
+    //当test1控制器被push的时候，以下设置能够自动隐藏tabbaritem；
+    //当test1被pop的时候，会自动显示tabbaritem；
+    test1.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:test1 animated:YES];
+}
 
 /*
 // Override to support conditional editing of the table view.

@@ -17,6 +17,11 @@
 		3BD6462C1BAE43F800EE7801 /* MessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6462B1BAE43F800EE7801 /* MessageTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		3BD6462F1BAE441100EE7801 /* DiscoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6462E1BAE441100EE7801 /* DiscoverTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		3BD646321BAE441E00EE7801 /* ProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD646311BAE441E00EE7801 /* ProfileTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3BD646351BAE4A0300EE7801 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD646341BAE4A0300EE7801 /* TabBarViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3BD646391BAE51C500EE7801 /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD646371BAE51C500EE7801 /* testViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3BD6463A1BAE51C500EE7801 /* testViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BD646381BAE51C500EE7801 /* testViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		3BD6463E1BAE533200EE7801 /* test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6463C1BAE533200EE7801 /* test2ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3BD6463F1BAE533200EE7801 /* test2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BD6463D1BAE533200EE7801 /* test2ViewController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,14 @@
 		3BD6462E1BAE441100EE7801 /* DiscoverTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverTableViewController.m; sourceTree = "<group>"; };
 		3BD646301BAE441E00EE7801 /* ProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileTableViewController.h; sourceTree = "<group>"; };
 		3BD646311BAE441E00EE7801 /* ProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileTableViewController.m; sourceTree = "<group>"; };
+		3BD646331BAE4A0300EE7801 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		3BD646341BAE4A0300EE7801 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		3BD646361BAE51C500EE7801 /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testViewController.h; sourceTree = "<group>"; };
+		3BD646371BAE51C500EE7801 /* testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testViewController.m; sourceTree = "<group>"; };
+		3BD646381BAE51C500EE7801 /* testViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = testViewController.xib; sourceTree = "<group>"; };
+		3BD6463B1BAE533200EE7801 /* test2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test2ViewController.h; sourceTree = "<group>"; };
+		3BD6463C1BAE533200EE7801 /* test2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test2ViewController.m; sourceTree = "<group>"; };
+		3BD6463D1BAE533200EE7801 /* test2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = test2ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +171,14 @@
 				3BD6462E1BAE441100EE7801 /* DiscoverTableViewController.m */,
 				3BD646301BAE441E00EE7801 /* ProfileTableViewController.h */,
 				3BD646311BAE441E00EE7801 /* ProfileTableViewController.m */,
+				3BD646331BAE4A0300EE7801 /* TabBarViewController.h */,
+				3BD646341BAE4A0300EE7801 /* TabBarViewController.m */,
+				3BD646361BAE51C500EE7801 /* testViewController.h */,
+				3BD646371BAE51C500EE7801 /* testViewController.m */,
+				3BD646381BAE51C500EE7801 /* testViewController.xib */,
+				3BD6463B1BAE533200EE7801 /* test2ViewController.h */,
+				3BD6463C1BAE533200EE7801 /* test2ViewController.m */,
+				3BD6463D1BAE533200EE7801 /* test2ViewController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -266,6 +287,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B5DABF31BAD15E0002529CC /* LaunchScreen.storyboard in Resources */,
+				3BD6463F1BAE533200EE7801 /* test2ViewController.xib in Resources */,
+				3BD6463A1BAE51C500EE7801 /* testViewController.xib in Resources */,
 				3B5DABF01BAD15E0002529CC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,9 +316,12 @@
 			files = (
 				3B5DAC1A1BAD49C7002529CC /* AppDelegate.m in Sources */,
 				3BD646291BAE43E400EE7801 /* HomeTableViewController.m in Sources */,
+				3BD646351BAE4A0300EE7801 /* TabBarViewController.m in Sources */,
 				3BD6462F1BAE441100EE7801 /* DiscoverTableViewController.m in Sources */,
 				3BD646321BAE441E00EE7801 /* ProfileTableViewController.m in Sources */,
+				3BD6463E1BAE533200EE7801 /* test2ViewController.m in Sources */,
 				3B5DAC1B1BAD49C7002529CC /* main.m in Sources */,
+				3BD646391BAE51C500EE7801 /* testViewController.m in Sources */,
 				3BD6462C1BAE43F800EE7801 /* MessageTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
