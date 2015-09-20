@@ -22,7 +22,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:0 target:self action:@selector(setting)];
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:0 target:self action:@selector(setting)];
+    self.navigationItem.rightBarButtonItem =  [UIBarButtonItem itemWithTarget:self action:@selector(setting) image:@"navigationbar_pop" highImage:@"navigationbar_pop_highlighted"];
 }
 
 -(void)setting

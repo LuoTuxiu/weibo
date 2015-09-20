@@ -20,6 +20,7 @@
 		3B35B8911BAE98B9002D37FD /* test2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B35B8831BAE98B9002D37FD /* test2ViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		3B35B8921BAE98B9002D37FD /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B35B8851BAE98B9002D37FD /* testViewController.m */; settings = {ASSET_TAGS = (); }; };
 		3B35B8931BAE98B9002D37FD /* testViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B35B8861BAE98B9002D37FD /* testViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		3B35B8991BAEA23A002D37FD /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B35B8981BAEA23A002D37FD /* UIBarButtonItem+Extension.m */; settings = {ASSET_TAGS = (); }; };
 		3B5DABF01BAD15E0002529CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B5DABEF1BAD15E0002529CC /* Assets.xcassets */; };
 		3B5DABF31BAD15E0002529CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5DABF11BAD15E0002529CC /* LaunchScreen.storyboard */; };
 		3B5DABFE1BAD15E0002529CC /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5DABFD1BAD15E0002529CC /* _____Tests.m */; };
@@ -67,6 +68,8 @@
 		3B35B8841BAE98B9002D37FD /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testViewController.h; sourceTree = "<group>"; };
 		3B35B8851BAE98B9002D37FD /* testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testViewController.m; sourceTree = "<group>"; };
 		3B35B8861BAE98B9002D37FD /* testViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = testViewController.xib; sourceTree = "<group>"; };
+		3B35B8971BAEA23A002D37FD /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		3B35B8981BAEA23A002D37FD /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		3B5DABE01BAD15E0002529CC /* 微博大项目.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微博大项目.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5DABEF1BAD15E0002529CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B5DABF21BAD15E0002529CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -205,6 +208,8 @@
 			children = (
 				3B35B8651BAE98B9002D37FD /* UIView+Extension.h */,
 				3B35B8661BAE98B9002D37FD /* UIView+Extension.m */,
+				3B35B8971BAEA23A002D37FD /* UIBarButtonItem+Extension.h */,
+				3B35B8981BAEA23A002D37FD /* UIBarButtonItem+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -550,6 +555,7 @@
 				3B35B88C1BAE98B9002D37FD /* TabBarViewController.m in Sources */,
 				3B35B8901BAE98B9002D37FD /* test2ViewController.m in Sources */,
 				3B35B88D1BAE98B9002D37FD /* main.m in Sources */,
+				3B35B8991BAEA23A002D37FD /* UIBarButtonItem+Extension.m in Sources */,
 				3B35B8891BAE98B9002D37FD /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
