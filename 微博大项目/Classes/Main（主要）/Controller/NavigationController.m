@@ -10,6 +10,29 @@
 
 @implementation NavigationController
 
+//
++(void)initialize
+{
+    //设置整个项目所有item的主题样式
+    UIBarButtonItem *item  =  [UIBarButtonItem appearance];
+    
+    //设置普通状态
+    NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
+    //这里的key一般都是attributeName的命名结尾
+    textAttrs[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    textAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:13.0];
+    [item setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
+    
+    //设置不可用状态
+    NSMutableDictionary *disableTextAttrs = [NSMutableDictionary dictionary];
+    //这里的key一般都是attributeName的命名结尾
+    disableTextAttrs[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
+//    [UIColor colorWithRed:1.0 green:1.0 blue:0.8 alpha:1.0]
+    disableTextAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:13.0];
+    [item setTitleTextAttributes:disableTextAttrs forState:UIControlStateDisabled];
+}
+
+
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
 
