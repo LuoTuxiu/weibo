@@ -1,0 +1,25 @@
+//
+//  PrefixHeader.pch
+//  微博大项目2
+//
+//  Created by 徐磊 on 15/10/26.
+//  Copyright © 2015年 Trbocare. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "UIView+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+#import "MBProgressHUD+NJ.h"
+#import "UIWindow+Extension.h"
+//RGB颜色
+#define HWColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+
+#define HWRandColor HWColor(arc4random_uniform(256),arc4random_uniform(256),arc4random_uniform(256))
+
+
+#endif /* PrefixHeader_pch */
