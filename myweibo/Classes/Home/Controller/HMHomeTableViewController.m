@@ -17,6 +17,7 @@
 #import "HWUser.h"
 #import "HWStatus.h"
 #import "MJExtension.h"
+#import "HWLoadMoreFooter.h"
 @interface HMHomeTableViewController ()<HWDropDownMenuDelegate>
 /**  微博数组，里面放得是模型，一个模型就代表一条微博*/
 @property (nonatomic,strong) NSMutableArray *statues;
@@ -50,8 +51,21 @@
 //    //加载最新的微博数据
 //    [self loadNewData];
     
-    //集成刷新控件
+    //集成下拉刷新控件
     [self setupRefresh];
+    
+//    集成上拉刷新
+    [self setupUpRefresh];
+    
+    //获取未读数
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(setupUnreadCounr) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    
+}
+
+-(void)setupUnreadCounr
+{
+    NSLog(@"%s", __func__);
 }
 
 -(void)setupNav
@@ -181,6 +195,17 @@
     UIRefreshControl *control =  [[UIRefreshControl alloc]init];
     [control addTarget:self action:@selector(refreshStateChange:) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:control];
+    
+    [control beginRefreshing];
+    //2.手动刷新一次
+    [self refreshStateChange:control];
+}
+
+
+-(void)setupUpRefresh
+{
+    HWLoadMoreFooter *footer  = [HWLoadMoreFooter footer];
+    self.tableView.tableFooterView   = footer;
 }
 
 -(void)refreshStateChange:(UIRefreshControl *)control
@@ -232,6 +257,9 @@
         //结束刷新
         [control endRefreshing];
         
+        //显示最新微博数量
+        [self showNewStatusCount:newStatuses.count];
+        
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         NSLog(@"请求失败%@",error);
         //结束刷新
@@ -240,6 +268,53 @@
     
 
 }
+
+-(void)showNewStatusCount:(int)count
+{
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 2;
+    //创建label
+    UILabel *label = [[UILabel alloc]init];
+    label.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"timeline_new_status_background"]];
+    label.width =  [UIScreen mainScreen].bounds.size.width;
+    label.height = 35;
+    label.y = 64 - 35;
+    label.textAlignment = NSTextAlignmentCenter;
+    //2.设置其它属性
+    if (count == 0) {
+        label.text = @"没有新的微博数据";
+    }
+    else
+    {
+        label.text = [NSString stringWithFormat:@"共有%d条新的微博数据",count];
+    }
+    
+    label.textColor = [UIColor whiteColor];
+    
+    //3.添加到view
+//    [self.navigationController.view addSubview:label];
+    [self.navigationController.view insertSubview:label belowSubview:self.navigationController.navigationBar];
+    
+    //4.添加动画
+    CGFloat duration  = 1.0;
+    [UIView animateWithDuration:duration animations:^{
+//        方法1：
+//        label.y += label.height;
+//        方法2：
+        label.transform = CGAffineTransformMakeTranslation(0, label.height);
+    } completion:^(BOOL finished) {
+        //延时执行动画
+        CGFloat delaytime = 1.0;
+        [UIView animateWithDuration:duration delay:delaytime options:UIViewAnimationOptionCurveLinear animations:^{
+//            方法1
+//            label.y -= label.height;
+//            方法2:回到原来的样子：如果有这种动画需求则可以用这个比较方便
+            label.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            [label removeFromSuperview];
+        }];
+    }];
+}
+
 -(void)titleClick:(UIButton *)titleButton
 {
     //创建下拉菜单

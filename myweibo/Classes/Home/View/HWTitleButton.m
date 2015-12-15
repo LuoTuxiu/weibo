@@ -31,6 +31,7 @@
         [self setBackgroundColor:[UIColor clearColor]];
         self.titleLabel.backgroundColor =  [UIColor clearColor];
         self.imageView.backgroundColor =  [UIColor clearColor];
+        self.backgroundColor= [UIColor redColor];
     }
     return self;
 }
@@ -70,7 +71,7 @@
 -(void)setTitle:(NSString *)title forState:(UIControlState)state
 {
     [super setTitle:title forState:state];
-    
+#warning 原来的sizeToFit是在图标在左边，文字在右边，然后文字自适应，所以，调整图标位置后，可能按钮会不包含图标
     [self sizeToFit];
 }
 
@@ -85,8 +86,16 @@
 //        attrs[NSFontAttributeName] = self.titleLabel.font;
 //        CGFloat width =  [self.currentTitle sizeWithAttributes:attrs].width;
     //2.计算imageView的frame
-    self.imageView.x  = CGRectGetMaxX(self.titleLabel.frame);
+    self.imageView.x  = CGRectGetMaxX(self.titleLabel.frame) + 10;
 //    NSLog(@"%@",NSStringFromCGRect(self.titleLabel.frame));
     
+}
+
+
+-(void)sizeToFit
+{
+    [super sizeToFit];
+    
+    self.width += 20;
 }
 @end

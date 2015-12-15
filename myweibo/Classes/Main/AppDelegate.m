@@ -67,9 +67,21 @@
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
 
+//当app进入后台时会调用
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    //app状态：
+//    1.没有打开app状态；
+//    2.前台运行状态;
+//    3.后台暂停状态：停止一切动画或者定时器、多媒体操作，很难再做其他操作
+//    4.后台运行状态；
+    //这个方式是向操作系统申请后台运行的资格，能维持多久是不确定的
+    UIBackgroundTaskIdentifier task  = [application beginBackgroundTaskWithExpirationHandler:^{
+//        当后台运行时间已近到了的时候，就会调用这个block
+        [application endBackgroundTask:task];
+    }];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
