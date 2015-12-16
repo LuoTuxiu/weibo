@@ -22,6 +22,8 @@
 		3B2C8D7E1BE2697500589630 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B2C8D7A1BE2697500589630 /* MBProgressHUD.bundle */; };
 		3B2C8D7F1BE2697500589630 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C8D7C1BE2697500589630 /* MBProgressHUD.m */; };
 		3B524F0C1BE0CE750030D1C1 /* HWNewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B524F0B1BE0CE750030D1C1 /* HWNewFeatureViewController.m */; };
+		3B5734C01C21A63300632AD7 /* HWStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5734BF1C21A63300632AD7 /* HWStatusCell.m */; };
+		3B5734C31C21AB2800632AD7 /* HWStautsFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5734C21C21AB2800632AD7 /* HWStautsFrame.m */; };
 		3B6B1DDA1BE0532C005E9896 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B6B1DD91BE0532C005E9896 /* Assets.xcassets */; };
 		3B6B1DDD1BE0532C005E9896 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6B1DDB1BE0532C005E9896 /* LaunchScreen.storyboard */; };
 		3B6B1DE81BE0532C005E9896 /* myweiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B1DE71BE0532C005E9896 /* myweiboTests.m */; };
@@ -126,6 +128,10 @@
 		3B2C8D7C1BE2697500589630 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		3B524F0A1BE0CE750030D1C1 /* HWNewFeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWNewFeatureViewController.h; sourceTree = "<group>"; };
 		3B524F0B1BE0CE750030D1C1 /* HWNewFeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWNewFeatureViewController.m; sourceTree = "<group>"; };
+		3B5734BE1C21A63300632AD7 /* HWStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWStatusCell.h; sourceTree = "<group>"; };
+		3B5734BF1C21A63300632AD7 /* HWStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWStatusCell.m; sourceTree = "<group>"; };
+		3B5734C11C21AB2800632AD7 /* HWStautsFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWStautsFrame.h; sourceTree = "<group>"; };
+		3B5734C21C21AB2800632AD7 /* HWStautsFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWStautsFrame.m; sourceTree = "<group>"; };
 		3B6B1DCA1BE0532C005E9896 /* myweibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myweibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B6B1DD91BE0532C005E9896 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B6B1DDC1BE0532C005E9896 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -479,6 +485,8 @@
 				3BBBF8491BE35EBD00750484 /* HWUser.m */,
 				3BBBF84B1BE35ED000750484 /* HWStatus.h */,
 				3BBBF84C1BE35ED000750484 /* HWStatus.m */,
+				3B5734C11C21AB2800632AD7 /* HWStautsFrame.h */,
+				3B5734C21C21AB2800632AD7 /* HWStautsFrame.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -491,6 +499,8 @@
 				3BD37F9E1C20568E009DCDE7 /* HWLoadMoreFooter.h */,
 				3BD37F9F1C20568E009DCDE7 /* HWLoadMoreFooter.m */,
 				3BD37FA11C2056D6009DCDE7 /* HWLoadMoreFooter.xib */,
+				3B5734BE1C21A63300632AD7 /* HWStatusCell.h */,
+				3B5734BF1C21A63300632AD7 /* HWStatusCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -939,9 +949,11 @@
 				3B7B30C81BE0A48F001CF9EE /* HWTabBar.m in Sources */,
 				3B6B1E391BE0536D005E9896 /* UIBarButtonItem+Extension.m in Sources */,
 				3B6B1E3F1BE0536D005E9896 /* HWSearchBar.m in Sources */,
+				3B5734C31C21AB2800632AD7 /* HWStautsFrame.m in Sources */,
 				3B2C8D6B1BE20D4B00589630 /* AFHTTPRequestOperationManager.m in Sources */,
 				3BBBF8691BE36B4000750484 /* MJProperty.m in Sources */,
 				3B2C8D6E1BE20D4B00589630 /* AFSecurityPolicy.m in Sources */,
+				3B5734C01C21A63300632AD7 /* HWStatusCell.m in Sources */,
 				3BBBF84A1BE35EBD00750484 /* HWUser.m in Sources */,
 				3B6B1E421BE0536D005E9896 /* HWTestViewController.m in Sources */,
 				3BBBF83A1BE35AE300750484 /* SDImageCache.m in Sources */,

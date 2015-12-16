@@ -16,21 +16,23 @@
 #import "UIImageView+WebCache.h"
 #import "HWUser.h"
 #import "HWStatus.h"
+#import "HWStautsFrame.h"
 #import "MJExtension.h"
 #import "HWLoadMoreFooter.h"
+#import "HWStatusCell.h"
 @interface HMHomeTableViewController ()<HWDropDownMenuDelegate>
 /**  微博数组，里面放得是模型，一个模型就代表一条微博*/
-@property (nonatomic,strong) NSMutableArray *statues;
+@property (nonatomic,strong) NSMutableArray *statueFrames;
 @end
 
 @implementation HMHomeTableViewController
 
--(NSMutableArray *)statues
+-(NSMutableArray *)statueFrames
 {
-    if (!_statues) {
-        _statues = [[NSMutableArray alloc]init];
+    if (!_statueFrames) {
+        _statueFrames = [[NSMutableArray alloc]init];
     }
-    return _statues;
+    return _statueFrames;
 }
 
 - (void)viewDidLoad {
@@ -174,10 +176,18 @@
 //            [self.statues addObject:status];
 //        }
         NSArray *newStatuses = [HWStatus objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+        
+        //将hwstatus数组转化为hwstatusFrame数组
+        NSMutableArray *newFrames =[NSMutableArray array];
+        for (HWStatus *status in newStatuses) {
+            HWStautsFrame *f  = [[HWStautsFrame alloc]init];
+            f.status = status;
+            [newFrames addObject:f];
+        }
 //        self.statues = [HWStatus objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
         //self.statues == @[]
         //newStatuses == @[status01,status02]
-        [self.statues addObjectsFromArray:newStatuses];
+        [self.statueFrames addObjectsFromArray:newStatuses];
         //self.statues = @[status01,status02]
 //        [self.statues addObject:newStatuses];
         //self.statues = @[@[status01,status02]]
@@ -221,10 +231,10 @@
     HWAccount *acount = [HWAccountTool account];
     NSMutableDictionary *params =  [NSMutableDictionary dictionary];
     params[@"access_token"] = acount.access_token;
-    HWStatus *firstStatus = [self.statues firstObject];
+    HWStautsFrame *firstStatus = [self.statueFrames firstObject];
     //添加这个属性，则可以加载在这个idstr以后的微博，即只是返回需要更新的微博
     if (firstStatus) {
-            params[@"since_id"] = firstStatus.idstr;
+            params[@"since_id"] = firstStatus.status.idstr;
     }
 
     //    params[@"count"] = @1;
@@ -248,9 +258,17 @@
         //self.statues = @[status01,status02]
         //        [self.statues addObject:newStatuses];
         //self.statues = @[@[status01,status02]]
-        NSRange range =  NSMakeRange(0, newStatuses.count);
+        //将hwstatus数组转化为hwstatusFrame数组
+        NSMutableArray *newFrames = [NSMutableArray array];
+        for (HWStatus *status in newStatuses) {
+            HWStautsFrame *f = [[HWStautsFrame alloc]init];
+            f.status = status;
+            [newFrames addObject:f];
+        }
+        
+        NSRange range =  NSMakeRange(0, newFrames.count);
         NSIndexSet *set =  [NSIndexSet indexSetWithIndexesInRange:range];
-        [self.statues insertObjects:newStatuses atIndexes:set];
+        [self.statueFrames insertObjects:newFrames atIndexes:set];
         //刷新表格
         [self.tableView reloadData];
         
@@ -258,7 +276,7 @@
         [control endRefreshing];
         
         //显示最新微博数量
-        [self showNewStatusCount:newStatuses.count];
+        [self showNewStatusCount:newFrames.count];
         
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         NSLog(@"请求失败%@",error);
@@ -390,16 +408,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return self.statues.count;
+    return self.statueFrames.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *ID =  @"statuses";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (!cell) {
-        cell =  [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
+    //获得cell
+    HWStatusCell *cell =  [HWStatusCell cellWithTableView:tableView];
+
     // Configure the cell...
     
     //字典取出的方法
@@ -419,13 +435,14 @@
     
     
     //模型取出的方法：
-    HWStatus *status =  self.statues[indexPath.row];
-    
+    HWStautsFrame *statusFrame =  self.statueFrames[indexPath.row];
+    HWStatus *status  = statusFrame.status;
     HWUser *user =  status.user;
-    cell.textLabel.text = user.name;
-    cell.detailTextLabel.text  = status.text;
-    UIImage *placehoder = [UIImage imageNamed:@"avatar_default_small"];
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:placehoder];
+    cell.statusFrame = statusFrame;
+//    cell.textLabel.text = user.name;
+//    cell.detailTextLabel.text  = status.text;
+//    UIImage *placehoder = [UIImage imageNamed:@"avatar_default_small"];
+//    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:placehoder];
     //
     return cell;
 }
@@ -474,5 +491,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    HWStautsFrame *frame  = self.statueFrames[indexPath.row];
+    return frame.cellHeight;
+}
 
 @end
