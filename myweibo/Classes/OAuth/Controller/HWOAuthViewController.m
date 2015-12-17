@@ -121,7 +121,7 @@
     
     //3.发送请求对象，只能是post请求
     [mgr POST:@"https://api.weibo.com/oauth2/access_token" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, NSDictionary * responseObject) {
-        NSLog(@"请求成功%@",responseObject);
+//        NSLog(@"请求成功%@",responseObject);
         [MBProgressHUD hideHUD];
         
 

@@ -59,9 +59,9 @@
 //    集成上拉刷新
     [self setupUpRefresh];
     
-    //获取未读数
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(setupUnreadCounr) userInfo:nil repeats:YES];
-    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+//    //获取未读数
+//    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(setupUnreadCounr) userInfo:nil repeats:YES];
+//    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     
 }
 
@@ -166,7 +166,7 @@
 //    params[@"count"] = @1;
     //3.发送请求对象，只能是get请求
     [mgr GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, NSDictionary * responseObject) {
-        NSLog(@"请求成功%@",responseObject);
+//        NSLog(@"请求成功%@",responseObject);
 //        //取得微博数组
 //        NSArray *dictArray  = responseObject[@"statuses"];
 //        
@@ -240,7 +240,7 @@
     //    params[@"count"] = @1;
     //3.发送请求对象，只能是get请求
     [mgr GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, NSDictionary * responseObject) {
-        NSLog(@"请求成功%@",responseObject);
+//        NSLog(@"请求成功%@",responseObject);
         //        //取得微博数组
         //        NSArray *dictArray  = responseObject[@"statuses"];
         //
@@ -276,7 +276,7 @@
         [control endRefreshing];
         
         //显示最新微博数量
-        [self showNewStatusCount:newFrames.count];
+        [self showNewStatusCount:(int)self.statueFrames.count];
         
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         NSLog(@"请求失败%@",error);

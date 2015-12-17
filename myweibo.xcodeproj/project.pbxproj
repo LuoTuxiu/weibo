@@ -44,6 +44,7 @@
 		3B6B1E431BE0536D005E9896 /* HWTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6B1E351BE0536D005E9896 /* HWTestViewController.xib */; };
 		3B7B30C51BE0614B001CF9EE /* HWTitleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B30C41BE0614B001CF9EE /* HWTitleTableViewController.m */; };
 		3B7B30C81BE0A48F001CF9EE /* HWTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B30C71BE0A48F001CF9EE /* HWTabBar.m */; };
+		3BA7486E1C22FF0C005A0F3F /* HWPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA7486D1C22FF0C005A0F3F /* HWPhotos.m */; };
 		3BB75A6E1BE2F89200D9C3AA /* HWAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB75A6D1BE2F89200D9C3AA /* HWAccountTool.m */; };
 		3BB75A741BE302B000D9C3AA /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB75A731BE302B000D9C3AA /* UIWindow+Extension.m */; };
 		3BBBF8151BE31D3800750484 /* HWTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBBF8141BE31D3800750484 /* HWTitleButton.m */; };
@@ -172,6 +173,8 @@
 		3B7B30C41BE0614B001CF9EE /* HWTitleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTitleTableViewController.m; sourceTree = "<group>"; };
 		3B7B30C61BE0A48F001CF9EE /* HWTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTabBar.h; sourceTree = "<group>"; };
 		3B7B30C71BE0A48F001CF9EE /* HWTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTabBar.m; sourceTree = "<group>"; };
+		3BA7486C1C22FF0C005A0F3F /* HWPhotos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWPhotos.h; sourceTree = "<group>"; };
+		3BA7486D1C22FF0C005A0F3F /* HWPhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWPhotos.m; sourceTree = "<group>"; };
 		3BB75A6C1BE2F89200D9C3AA /* HWAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWAccountTool.h; sourceTree = "<group>"; };
 		3BB75A6D1BE2F89200D9C3AA /* HWAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWAccountTool.m; sourceTree = "<group>"; };
 		3BB75A721BE302B000D9C3AA /* UIWindow+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Extension.h"; sourceTree = "<group>"; };
@@ -487,6 +490,8 @@
 				3BBBF84C1BE35ED000750484 /* HWStatus.m */,
 				3B5734C11C21AB2800632AD7 /* HWStautsFrame.h */,
 				3B5734C21C21AB2800632AD7 /* HWStautsFrame.m */,
+				3BA7486C1C22FF0C005A0F3F /* HWPhotos.h */,
+				3BA7486D1C22FF0C005A0F3F /* HWPhotos.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -949,6 +954,7 @@
 				3B7B30C81BE0A48F001CF9EE /* HWTabBar.m in Sources */,
 				3B6B1E391BE0536D005E9896 /* UIBarButtonItem+Extension.m in Sources */,
 				3B6B1E3F1BE0536D005E9896 /* HWSearchBar.m in Sources */,
+				3BA7486E1C22FF0C005A0F3F /* HWPhotos.m in Sources */,
 				3B5734C31C21AB2800632AD7 /* HWStautsFrame.m in Sources */,
 				3B2C8D6B1BE20D4B00589630 /* AFHTTPRequestOperationManager.m in Sources */,
 				3BBBF8691BE36B4000750484 /* MJProperty.m in Sources */,

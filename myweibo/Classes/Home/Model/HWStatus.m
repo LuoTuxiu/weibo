@@ -7,7 +7,11 @@
 //
 
 #import "HWStatus.h"
-
+#import "MJExtension.h"
+#import "HWPhotos.h"
 @implementation HWStatus
-
+-(NSDictionary *)objectClassInArray
+{
+    return @{@"pic_urls":[HWPhotos class]};
+}
 @end

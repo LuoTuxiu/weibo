@@ -10,6 +10,9 @@
 #define HWStatusCellNameFont [UIFont systemFontOfSize:15]
 #define HWStatusCellTimeFont [UIFont systemFontOfSize:13]
 #define HWStatusCellSourceFont [UIFont systemFontOfSize:13]
+//正文字体
+#define HWStatusCellContentFont [UIFont systemFontOfSize:13]
+
 #import <Foundation/Foundation.h>
 @class HWStatus;
 @interface HWStautsFrame : NSObject

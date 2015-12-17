@@ -11,6 +11,7 @@
 #import "HWStatus.h"
 #import "HWUser.h"
 #import "UIImageView+WebCache.h"
+#import "HWPhotos.h"
 @interface HWStatusCell()
 
 //原创微博整体
@@ -48,10 +49,12 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        
         //1.原创微博整体
         //原创微博整体
 //        @property (nonatomic,weak) UIView *originalView;
         UIView *orginalView = [[UIView alloc]init];
+//        orginalView.backgroundColor = [UIColor redColor];
         [self.contentView addSubview:orginalView];
         self.originalView=orginalView;
 //        //头像
@@ -82,17 +85,22 @@
         [timeLabel setFont:HWStatusCellTimeFont];
         [orginalView addSubview:timeLabel];
         self.timeLabel=timeLabel;
-//        //正文
-//        @property (nonatomic,weak) UILabel *contentLabel;
-        UILabel *contentLabel = [[UILabel alloc]init];
-        [orginalView addSubview:contentLabel];
-        self.contentLabel=contentLabel;
+
 //        //来源
 //        @property (nonatomic,weak) UILabel *sourceLabel;
         UILabel *sourceLabel = [[UILabel alloc]init];
         sourceLabel.font = HWStatusCellSourceFont;
         [orginalView addSubview:sourceLabel];
         self.sourceLabel=sourceLabel;
+        
+        //        //正文
+        //        @property (nonatomic,weak) UILabel *contentLabel;
+        UILabel *contentLabel = [[UILabel alloc]init];
+        [contentLabel setFont:HWStatusCellContentFont];
+        
+        [orginalView addSubview:contentLabel];
+        contentLabel.numberOfLines = 0;
+        self.contentLabel=contentLabel;
     }
     return self;
 }
@@ -128,13 +136,33 @@
 //    UIImageView *photoView = [[UIImageView alloc]init];
 //    [orginalView addSubview:photoView];
     self.photoView.frame=statusFrame.photoViewFrame;
-    self.photoView.backgroundColor = [UIColor redColor];
+//    self.photoView.backgroundColor = [UIColor blueColor];
+    if (status.pic_urls.count) {
+        HWPhotos *photo = [status.pic_urls firstObject];
+            [self.photoView sd_setImageWithURL:[NSURL URLWithString:photo.thumbnail_pic] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
+        self.photoView.hidden= NO;
+    }
+    else
+    {
+        self.photoView.hidden = YES;
+    }
+
 //    //        //会员图标
 //    //        @property (nonatomic,weak) UIImageView *vipView;
 //    UIImageView *vipView = [[UIImageView alloc]init];
 //    [orginalView addSubview:vipView];
-    self.vipView.frame=statusFrame.vipViewFrame;
-    self.vipView.image = [UIImage imageNamed:@"common_icon_membership_level1"];
+    if (user.isVip) {
+        self.vipView.hidden = NO;
+        self.vipView.frame=statusFrame.vipViewFrame;
+        NSString *vipname  =  [NSString stringWithFormat:@"common_icon_membership_level%d",user.mbrank];
+        self.vipView.image = [UIImage imageNamed:vipname];
+        self.nameLabel.textColor  = [UIColor orangeColor];
+    }
+    else
+    {
+        self.vipView.hidden = YES;
+        self.nameLabel.textColor  = [UIColor blackColor];
+    }
 //    //        //名称
 //    //        @property (nonatomic,weak) UILabel *nameLabel;
 //    UILabel *nameLabel = [[UILabel alloc]init];
@@ -152,13 +180,16 @@
 //    UILabel *contentLabel = [[UILabel alloc]init];
 //    [orginalView addSubview:contentLabel];
 //    self.contentLabel=contentLabel;
-    self.contentLabel.frame=statusFrame.contentLabelFrame;
     self.contentLabel.text = status.text;
+//    NSLog(@"%@",status.text);
+    self.contentLabel.frame=statusFrame.contentLabelFrame;
+//    NSLog(@"%@",NSStringFromCGRect(self.contentLabel.frame));
 //    //        //来源
 //    //        @property (nonatomic,weak) UILabel *sourceLabel;
 //    UILabel *sourceLabel = [[UILabel alloc]init];
 //    [orginalView addSubview:sourceLabel];
     self.sourceLabel.text = status.source;
+    
     self.sourceLabel.frame  =statusFrame.sourceLabelFrame;
 }
 
