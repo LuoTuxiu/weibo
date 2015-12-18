@@ -27,9 +27,9 @@
 //    return [text sizeWithAttributes:attrs];
     //size代表约束的最大宽度
     CGSize maxSize  = CGSizeMake(maxW, MAXFLOAT);
-    NSLog(@"maxW is %f",maxW);
+//    NSLog(@"maxW is %f",maxW);
     CGSize returnSize =  [text boundingRectWithSize:maxSize options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin  attributes:attrs context:nil].size;
-    NSLog(@"returnSize is %@",NSStringFromCGSize(returnSize));
+//    NSLog(@"returnSize is %@",NSStringFromCGSize(returnSize));
     return returnSize;
 }
 
@@ -87,9 +87,12 @@
     CGFloat contentLabelX = iconX;
     CGFloat contentLabelY  = MAX(CGRectGetMaxY(self.iconViewFrame), CGRectGetMaxY(self.timeLabelFrame)) + HWStatusCellBorderW;;
     CGFloat maxW   =  cellW - 2 * contentLabelX;
-    CGSize contentLabelSize = [self sizeWithText:status.created_at font:HWStatusCellContentFont maxW:maxW];
-    NSLog(@"%@",NSStringFromCGSize(contentLabelSize));
+//    NSLog(@"%@",status.created_at);
+    CGSize contentLabelSize = [self sizeWithText:status.text font:HWStatusCellContentFont maxW:maxW];
+//    CGSize contentLabelSize = CGSizeMake(320, 200);
+//    NSLog(@"%@",NSStringFromCGSize(contentLabelSize));
     self.contentLabelFrame = (CGRect){{contentLabelX,contentLabelY},contentLabelSize};
+    
     
     CGFloat orgingalH;
     //    //配图

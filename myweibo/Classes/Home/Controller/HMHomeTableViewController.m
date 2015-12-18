@@ -436,8 +436,8 @@
     
     //模型取出的方法：
     HWStautsFrame *statusFrame =  self.statueFrames[indexPath.row];
-    HWStatus *status  = statusFrame.status;
-    HWUser *user =  status.user;
+//    HWStatus *status  = statusFrame.status;
+//    HWUser *user =  status.user;
     cell.statusFrame = statusFrame;
 //    cell.textLabel.text = user.name;
 //    cell.detailTextLabel.text  = status.text;
