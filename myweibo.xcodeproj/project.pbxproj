@@ -79,6 +79,7 @@
 		3BBBF8701BE36B4000750484 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBBF8651BE36B4000750484 /* NSString+MJExtension.m */; };
 		3BD37FA01C20568E009DCDE7 /* HWLoadMoreFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD37F9F1C20568E009DCDE7 /* HWLoadMoreFooter.m */; };
 		3BD37FA21C2056D6009DCDE7 /* HWLoadMoreFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BD37FA11C2056D6009DCDE7 /* HWLoadMoreFooter.xib */; };
+		F5511DCE1C253D830020538B /* HWStatusToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F5511DCD1C253D830020538B /* HWStatusToolBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -244,6 +245,8 @@
 		3BD37F9E1C20568E009DCDE7 /* HWLoadMoreFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWLoadMoreFooter.h; sourceTree = "<group>"; };
 		3BD37F9F1C20568E009DCDE7 /* HWLoadMoreFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWLoadMoreFooter.m; sourceTree = "<group>"; };
 		3BD37FA11C2056D6009DCDE7 /* HWLoadMoreFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HWLoadMoreFooter.xib; sourceTree = "<group>"; };
+		F5511DCC1C253D830020538B /* HWStatusToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWStatusToolBar.h; sourceTree = "<group>"; };
+		F5511DCD1C253D830020538B /* HWStatusToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWStatusToolBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -506,6 +509,8 @@
 				3BD37FA11C2056D6009DCDE7 /* HWLoadMoreFooter.xib */,
 				3B5734BE1C21A63300632AD7 /* HWStatusCell.h */,
 				3B5734BF1C21A63300632AD7 /* HWStatusCell.m */,
+				F5511DCC1C253D830020538B /* HWStatusToolBar.h */,
+				F5511DCD1C253D830020538B /* HWStatusToolBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -924,6 +929,7 @@
 				3BBBF86D1BE36B4000750484 /* NSObject+MJCoding.m in Sources */,
 				3BBBF83E1BE35AE300750484 /* SDWebImageDownloaderOperation.m in Sources */,
 				3BBBF83C1BE35AE300750484 /* SDWebImageDecoder.m in Sources */,
+				F5511DCE1C253D830020538B /* HWStatusToolBar.m in Sources */,
 				3BBBF83F1BE35AE300750484 /* SDWebImageManager.m in Sources */,
 				3B6B1E3B1BE0536D005E9896 /* HMMainTabBarController.m in Sources */,
 				3B2C8D6D1BE20D4B00589630 /* AFNetworkReachabilityManager.m in Sources */,

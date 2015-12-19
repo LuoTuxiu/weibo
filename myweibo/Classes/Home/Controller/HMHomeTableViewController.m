@@ -43,7 +43,9 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
+    [self.tableView setBackgroundColor:HWColor(211, 211, 211)];
+    //如果有导航栏，则会自动加上64;
+//    self.tableView.contentInset = UIEdgeInsetsMake(HWStatusCellBorderH, 0, 0, 0);
     //设置导航栏内容
     [self setupNav];
     
@@ -64,6 +66,13 @@
 //    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     
 }
+
+//-(void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//    
+//    NSLog(@"view %@",NSStringFromUIEdgeInsets(self.tableView.contentInset));
+//}
 
 -(void)setupUnreadCounr
 {

@@ -96,7 +96,10 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-
+/**
+ *  内存不足时的处理
+ *
+ */
 -(void)applicationDidReceiveMemoryWarning:(UIApplication *)application
 {
     SDWebImageManager *mgr =  [SDWebImageManager sharedManager];

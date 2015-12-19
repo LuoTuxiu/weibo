@@ -21,4 +21,7 @@
 @property (nonatomic,copy) NSString *source;
 //微博配图数组
 @property (nonatomic,strong) NSArray *pic_urls;
+
+//转发微博属性
+@property ( nonatomic ,strong) HWStatus *retweeted_status;
 @end

@@ -12,7 +12,9 @@
 #define HWStatusCellSourceFont [UIFont systemFontOfSize:13]
 //正文字体
 #define HWStatusCellContentFont [UIFont systemFontOfSize:13]
-
+//转发正文字体
+#define HWStatusCellretweetContentFont [UIFont systemFontOfSize:13]
+#define HWStatusCellBorderH 10
 #import <Foundation/Foundation.h>
 @class HWStatus;
 @interface HWStautsFrame : NSObject
@@ -36,4 +38,15 @@
 @property (nonatomic,assign) CGRect sourceLabelFrame;
 
 @property (nonatomic,assign) CGFloat cellHeight;
+
+//转发微博整体
+@property (nonatomic,assign) CGRect retweetlViewFrame;
+//转发微博正文+ 昵称
+@property (nonatomic,assign) CGRect retweetlLabelFrame;
+//配图
+@property (nonatomic,assign) CGRect retweetlphotoViewFrame;
+
+
+//工具条
+@property (nonatomic,assign) CGRect toolBarViewFrame;
 @end
