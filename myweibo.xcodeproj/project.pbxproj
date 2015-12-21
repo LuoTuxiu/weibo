@@ -838,6 +838,7 @@
 				TargetAttributes = {
 					3B6B1DC91BE0532C005E9896 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 8BFL9MCCE8;
 					};
 					3B6B1DE21BE0532C005E9896 = {
 						CreatedOnToolsVersion = 7.1;
@@ -1100,6 +1101,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = myweibo/Info.plist;
@@ -1115,6 +1117,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = myweibo/Info.plist;

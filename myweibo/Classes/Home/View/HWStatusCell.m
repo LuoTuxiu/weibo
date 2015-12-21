@@ -308,7 +308,9 @@
     
     
     //工具条
+    self.toolBarView.status  = status;
     self.toolBarView.frame = statusFrame.toolBarViewFrame;
+
 }
 
 -(void)setFrame:(CGRect)frame

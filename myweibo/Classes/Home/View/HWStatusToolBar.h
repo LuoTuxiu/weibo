@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class HWStatus;
 @interface HWStatusToolBar : UIView
 +(instancetype)toolBar;
+@property ( nonatomic ,strong) HWStatus *status;
+
 @end
