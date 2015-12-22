@@ -9,28 +9,8 @@
 #import "HWStautsFrame.h"
 #import "HWStatus.h"
 #import "HWUser.h"
-#define HWStatusCellBorderW 10
+#import "NSString+Extension.h"
 @implementation HWStautsFrame
--(CGSize)sizeWithText:(NSString *)text font:(UIFont *)font
-{
-    return [self sizeWithText:text font:font maxW:MAXFLOAT];
-
-}
-//根据最大宽度来算frame
--(CGSize)sizeWithText:(NSString *)text font:(UIFont *)font maxW:(CGFloat)maxW
-{
-    NSMutableDictionary *attrs  = [NSMutableDictionary dictionary];
-//    attrs[NSForegroundColorAttributeName]= [UIColor blackColor];
-    attrs[NSFontAttributeName] = font;
-//    NSLog(@"%@",font);
-//    return [text sizeWithAttributes:attrs];
-    //size代表约束的最大宽度
-    CGSize maxSize  = CGSizeMake(maxW, MAXFLOAT);
-//    NSLog(@"maxW is %f",maxW);
-    CGSize returnSize =  [text boundingRectWithSize:maxSize options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin  attributes:attrs context:nil].size;
-//    NSLog(@"returnSize is %@",NSStringFromCGSize(returnSize));
-    return returnSize;
-}
 
 -(void)setStatus:(HWStatus *)status
 {
@@ -52,7 +32,7 @@
 //    @property (nonatomic,assign) CGRect nameLabelFrame;
     CGFloat nameX = CGRectGetMaxX(self.iconViewFrame) + HWStatusCellBorderW;
     CGFloat nameY = iconY;
-    CGSize nameSize = [self sizeWithText:user.name font:HWStatusCellNameFont];
+    CGSize nameSize = [user.name sizeWithTextfont:HWStatusCellNameFont];
 //    self.nameLabelFrame = CGRectMake(nameX, nameY, nameSize.width, nameSize.height);
     self.nameLabelFrame = (CGRect){{nameX,nameY},nameSize};
 
@@ -70,7 +50,7 @@
 //    @property (nonatomic,assign) CGRect timeLabelFrame;
     CGFloat timeX = nameX;
     CGFloat timeY  = CGRectGetMaxY(self.nameLabelFrame) + HWStatusCellBorderW;
-    CGSize timeSize = [self sizeWithText:status.created_at font:HWStatusCellTimeFont];
+    CGSize timeSize = [status.created_at sizeWithTextfont:HWStatusCellTimeFont];
     self.timeLabelFrame = (CGRect){{timeX,timeY},timeSize};
 
     
@@ -78,7 +58,7 @@
 //    @property (nonatomic,assign) CGRect sourceLabelFrame;
     CGFloat sourceLabelX = CGRectGetMaxX(self.timeLabelFrame) + HWStatusCellBorderW;
     CGFloat sourceLabelY  = CGRectGetMaxY(self.nameLabelFrame) + HWStatusCellBorderW;
-    CGSize sourceLabelSize = [self sizeWithText:status.created_at font:HWStatusCellSourceFont];
+    CGSize sourceLabelSize = [status.source sizeWithTextfont:HWStatusCellSourceFont];
     self.sourceLabelFrame = (CGRect){{sourceLabelX,sourceLabelY},sourceLabelSize};
     
     //    //正文
@@ -87,7 +67,8 @@
     CGFloat contentLabelY  = MAX(CGRectGetMaxY(self.iconViewFrame), CGRectGetMaxY(self.timeLabelFrame)) + HWStatusCellBorderW;;
     CGFloat maxW   =  cellW - 2 * contentLabelX;
 //    NSLog(@"%@",status.created_at);
-    CGSize contentLabelSize = [self sizeWithText:status.text font:HWStatusCellContentFont maxW:maxW];
+
+    CGSize contentLabelSize = [status.text sizeWithfont:HWStatusCellContentFont maxW:maxW];
 //    CGSize contentLabelSize = CGSizeMake(320, 200);
 //    NSLog(@"%@",NSStringFromCGSize(contentLabelSize));
     self.contentLabelFrame = (CGRect){{contentLabelX,contentLabelY},contentLabelSize};
@@ -127,7 +108,7 @@
         //正文
         CGFloat retweetlabelX  = HWStatusCellBorderW;
         CGFloat retweetlabelY = HWStatusCellBorderW;
-        CGSize contentLabelSize = [self sizeWithText:retweetContent font:HWStatusCellretweetContentFont maxW:maxW];
+        CGSize contentLabelSize = [retweeted_status.text sizeWithfont:HWStatusCellretweetContentFont maxW:maxW];
         self.retweetlLabelFrame = (CGRect){{retweetlabelX,retweetlabelY},contentLabelSize};
         //配图
         if (retweeted_status.pic_urls.count) {

@@ -13,6 +13,8 @@
 #import "UIImageView+WebCache.h"
 #import "HWPhotos.h"
 #import "HWStatusToolBar.h"
+//#import "HWStautsFrame.h"
+#import "NSString+Extension.h"
 @interface HWStatusCell()
 
 //原创微博整体
@@ -117,6 +119,7 @@
     //        @property (nonatomic,weak) UILabel *timeLabel;
     UILabel *timeLabel = [[UILabel alloc]init];
     [timeLabel setFont:HWStatusCellTimeFont];
+    timeLabel.textColor = [UIColor orangeColor];
     [orginalView addSubview:timeLabel];
     self.timeLabel=timeLabel;
     
@@ -241,7 +244,26 @@
 //    //        @property (nonatomic,weak) UILabel *timeLabel;
 //    UILabel *timeLabel = [[UILabel alloc]init];
 //    [orginalView addSubview:timeLabel];
-    self.timeLabel.text = status.created_at;
+    NSString *newTime  = status.created_at;
+    NSInteger timeLen  = self.timeLabel.text.length;
+    if (timeLen && timeLen != newTime.length) {//说明两个时间的长度不一样了
+        //    //时间
+        //    @property (nonatomic,assign) CGRect timeLabelFrame;
+       
+        CGFloat timeX = statusFrame.nameLabelFrame.origin.x;
+        CGFloat timeY  = CGRectGetMaxY(statusFrame.nameLabelFrame) + HWStatusCellBorderW;
+        CGSize timeSize = [newTime sizeWithTextfont:HWStatusCellTimeFont];
+        self.timeLabel.frame = (CGRect){{timeX,timeY},timeSize};
+        
+        
+        //    //来源
+        //    @property (nonatomic,assign) CGRect sourceLabelFrame;
+        CGFloat sourceLabelX = CGRectGetMaxX(self.timeLabel.frame) + HWStatusCellBorderW;
+        CGFloat sourceLabelY  = timeY;
+        CGSize sourceLabelSize = [status.source sizeWithTextfont :HWStatusCellSourceFont];
+        self.sourceLabel.frame = (CGRect){{sourceLabelX,sourceLabelY},sourceLabelSize};
+    }
+    self.timeLabel.text = newTime;
     self.timeLabel.frame=statusFrame.timeLabelFrame;
 //    //        //正文
 //    //        @property (nonatomic,weak) UILabel *contentLabel;

@@ -9,6 +9,7 @@
 #import "HWStatus.h"
 #import "MJExtension.h"
 #import "HWPhotos.h"
+#import "NSDate+Extension.h"
 @implementation HWStatus
 //在这里用这个类方法告诉编译器，数组pic_urls要转成模型HWPhotos类
 +(NSDictionary *)objectClassInArray
@@ -59,11 +60,11 @@
     //日历对象（方便比较两个日期之间的差距）
     NSCalendar *calendar  =  [NSCalendar currentCalendar];
     NSCalendarUnit uint = NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
-        NSLog(@"%@,,,%@",creatDate,now);
+//        NSLog(@"%@,,,%@",creatDate,now);
     //计算两个日期的差值
     NSDateComponents *compoment =   [calendar components:uint fromDate:creatDate toDate:now options:0];
 //    compoment.minute代表相差了多少；
-    NSLog(@"compoment%@",compoment);
+//    NSLog(@"compoment%@",compoment);
 
     //可以转换calendar成年月日或者其它属性
     NSDateComponents *createDareCmp =  [calendar components:uint fromDate:creatDate];
@@ -71,11 +72,11 @@
     NSDateComponents *nowCmp =  [calendar components:uint fromDate:now];
     
     
-    if ([self isThisYear:creatDate]) {//今年
-        if ([self isYesterday:creatDate]) {
+    if ([creatDate isThisYear]) {//今年
+        if ([creatDate isYesterday]) {
             fmt.dateFormat  =  @"昨天 HH:mm";
             return [fmt stringFromDate:creatDate];
-        }else if ([self isToday:creatDate]){
+        }else if ([creatDate isToday]){
             if (compoment.hour >=  1) {//    //大于60分钟的；
                 return [NSString stringWithFormat:@"%ld小时前",(long)compoment.hour];
             } else if(compoment.minute >= 1){
@@ -96,53 +97,27 @@
         fmt.dateFormat  =  @"yyyy-MM-dd HH:mm";
         return [fmt stringFromDate:creatDate];
     }
-    NSLog(@"createDareCmp%@",createDareCmp);
+//    NSLog(@"createDareCmp%@",createDareCmp);
     return _created_at;
     
 }
 
--(BOOL)isThisYear:(NSDate *)date
+
+
+-(void)setSource:(NSString *)source
 {
-    //日历对象（方便比较两个日期之间的差距）
-    NSCalendar *calendar  =  [NSCalendar currentCalendar];
-
-    NSDateComponents *createDareCmp =  [calendar components:NSCalendarUnitYear fromDate:date];
-    
-    NSDateComponents *nowCmp =  [calendar components:NSCalendarUnitYear fromDate:[NSDate date]];
-    
-    return createDareCmp.year == nowCmp.year;
-}
-
--(BOOL)isYesterday:(NSDate *)date
-{
-
-    
-    NSDateFormatter *fmt  = [[NSDateFormatter alloc]init];
-    fmt.dateFormat   = @"YYYY-MM-dd";
-    NSString *dateStr = [fmt stringFromDate:date];
-    
-    NSString *nowStr  = [fmt stringFromDate:[NSDate date]];
-    //再转一次，去掉小时分钟秒
-    NSDate * date2 =  [fmt dateFromString:dateStr];
-    NSDate * now2 =  [fmt dateFromString:nowStr];
-    
-    //计算两个日期的差值
-    //日历对象（方便比较两个日期之间的差距）
-    NSCalendar *calendar  =  [NSCalendar currentCalendar];
-    NSCalendarUnit uint = NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear;
-    NSDateComponents *compoment =   [calendar components:uint fromDate:date2 toDate:now2 options:0];
-    return compoment.day== 1  && compoment.month == 0 && compoment.year == 0;
-    
-}
-
--(BOOL)isToday:(NSDate *)date
-{
-    NSDateFormatter *fmt  = [[NSDateFormatter alloc]init];
-    fmt.dateFormat   = @"YYYY-MM-dd";
-    NSString *dateStr = [fmt stringFromDate:date];
-    
-    NSString *nowStr  = [fmt stringFromDate:[NSDate date]];
-    
-    return [dateStr isEqualToString:nowStr];
+    NSLog(@"%@",source);
+//    _source = source;
+//    <a href="http://app.weibo.com/t/feed/f0ANz" rel="nofollow">nubia Z9 mini</a>
+    //方法1.正则表达式
+    //方法2.直接字符串截串
+    NSRange range;
+    range.location = [source rangeOfString:@">"].location + 1;
+//    NSBackwardsSearch反向检索
+//    range.length = [source rangeOfString:@">" options:NSBackwardsSearch].location - range.location;
+    range.length = [source rangeOfString:@"</"].location - range.location;
+//    NSLog(@"%lu,%lu",(unsigned long)range.location,(unsigned long)range.length);
+    _source = [NSString stringWithFormat:@"来自%@",[source substringWithRange:range]];
+//    NSLog(@"%@",_source);
 }
 @end

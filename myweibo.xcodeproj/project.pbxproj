@@ -42,6 +42,8 @@
 		3B6B1E411BE0536D005E9896 /* HMProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B1E2F1BE0536D005E9896 /* HMProfileTableViewController.m */; };
 		3B6B1E421BE0536D005E9896 /* HWTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B1E341BE0536D005E9896 /* HWTestViewController.m */; };
 		3B6B1E431BE0536D005E9896 /* HWTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6B1E351BE0536D005E9896 /* HWTestViewController.xib */; };
+		3B7550691C29841000A95CBA /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7550681C29841000A95CBA /* NSDate+Extension.m */; };
+		3B75506C1C298E9700A95CBA /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B75506B1C298E9700A95CBA /* NSString+Extension.m */; };
 		3B7B30C51BE0614B001CF9EE /* HWTitleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B30C41BE0614B001CF9EE /* HWTitleTableViewController.m */; };
 		3B7B30C81BE0A48F001CF9EE /* HWTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B30C71BE0A48F001CF9EE /* HWTabBar.m */; };
 		3BA7486E1C22FF0C005A0F3F /* HWPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA7486D1C22FF0C005A0F3F /* HWPhotos.m */; };
@@ -170,6 +172,11 @@
 		3B6B1E331BE0536D005E9896 /* HWTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTestViewController.h; sourceTree = "<group>"; };
 		3B6B1E341BE0536D005E9896 /* HWTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTestViewController.m; sourceTree = "<group>"; };
 		3B6B1E351BE0536D005E9896 /* HWTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HWTestViewController.xib; sourceTree = "<group>"; };
+		3B7550671C29841000A95CBA /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		3B7550681C29841000A95CBA /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		3B75506A1C298E9700A95CBA /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		3B75506B1C298E9700A95CBA /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		3B75506D1C298F5700A95CBA /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3B7B30C31BE0614B001CF9EE /* HWTitleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTitleTableViewController.h; sourceTree = "<group>"; };
 		3B7B30C41BE0614B001CF9EE /* HWTitleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTitleTableViewController.m; sourceTree = "<group>"; };
 		3B7B30C61BE0A48F001CF9EE /* HWTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTabBar.h; sourceTree = "<group>"; };
@@ -518,6 +525,7 @@
 		3B6B1E0D1BE0536D005E9896 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				3B75506D1C298F5700A95CBA /* PrefixHeader.pch */,
 				3B6B1E0E1BE0536D005E9896 /* AppDelegate.h */,
 				3B6B1E0F1BE0536D005E9896 /* AppDelegate.m */,
 				3B6B1E101BE0536D005E9896 /* Category */,
@@ -539,6 +547,10 @@
 				3B6B1E141BE0536D005E9896 /* UIView+Extension.m */,
 				3BB75A721BE302B000D9C3AA /* UIWindow+Extension.h */,
 				3BB75A731BE302B000D9C3AA /* UIWindow+Extension.m */,
+				3B7550671C29841000A95CBA /* NSDate+Extension.h */,
+				3B7550681C29841000A95CBA /* NSDate+Extension.m */,
+				3B75506A1C298E9700A95CBA /* NSString+Extension.h */,
+				3B75506B1C298E9700A95CBA /* NSString+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -838,7 +850,7 @@
 				TargetAttributes = {
 					3B6B1DC91BE0532C005E9896 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 8BFL9MCCE8;
+						DevelopmentTeam = T6GHWG4MR5;
 					};
 					3B6B1DE21BE0532C005E9896 = {
 						CreatedOnToolsVersion = 7.1;
@@ -909,6 +921,7 @@
 				3BBBF8681BE36B4000750484 /* MJFoundation.m in Sources */,
 				3B6B1E3A1BE0536D005E9896 /* UIView+Extension.m in Sources */,
 				3B6B1E381BE0536D005E9896 /* AppDelegate.m in Sources */,
+				3B7550691C29841000A95CBA /* NSDate+Extension.m in Sources */,
 				3B6B1E411BE0536D005E9896 /* HMProfileTableViewController.m in Sources */,
 				3B6B1E401BE0536D005E9896 /* HMMessageTableViewController.m in Sources */,
 				3BBBF86F1BE36B4000750484 /* NSObject+MJProperty.m in Sources */,
@@ -966,6 +979,7 @@
 				3B2C8D6B1BE20D4B00589630 /* AFHTTPRequestOperationManager.m in Sources */,
 				3BBBF8691BE36B4000750484 /* MJProperty.m in Sources */,
 				3B2C8D6E1BE20D4B00589630 /* AFSecurityPolicy.m in Sources */,
+				3B75506C1C298E9700A95CBA /* NSString+Extension.m in Sources */,
 				3B5734C01C21A63300632AD7 /* HWStatusCell.m in Sources */,
 				3BBBF84A1BE35EBD00750484 /* HWUser.m in Sources */,
 				3B6B1E421BE0536D005E9896 /* HWTestViewController.m in Sources */,

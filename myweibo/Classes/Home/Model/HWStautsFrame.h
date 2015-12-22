@@ -15,6 +15,8 @@
 //转发正文字体
 #define HWStatusCellretweetContentFont [UIFont systemFontOfSize:13]
 #define HWStatusCellBorderH 10
+#define HWStatusCellBorderW 10
+
 #import <Foundation/Foundation.h>
 @class HWStatus;
 @interface HWStautsFrame : NSObject

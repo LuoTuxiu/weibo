@@ -79,7 +79,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "399"
             endingLineNumber = "399"
-            landmarkName = "-DropDownMenuDidMiss:"
+            landmarkName = "-pop"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -255,8 +255,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "72"
             endingLineNumber = "72"
-            landmarkName = "-setupNav"
-            landmarkType = "5">
+            landmarkName = "@implementation HMHomeTableViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -346,11 +346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "myweibo/Classes/Home/Model/HWStautsFrame.m"
-            timestampString = "472053183.008039"
+            timestampString = "472486657.310186"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "-setStatus:"
             landmarkType = "5">
          </BreakpointContent>
@@ -362,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "myweibo/Classes/Home/Model/HWStautsFrame.m"
-            timestampString = "472053183.008039"
+            timestampString = "472486657.310186"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "-setStatus:"
             landmarkType = "5">
          </BreakpointContent>
@@ -378,11 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "myweibo/Classes/Home/Model/HWStautsFrame.m"
-            timestampString = "472056094.823119"
+            timestampString = "472486657.310186"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "-setStatus:"
             landmarkType = "5">
          </BreakpointContent>
@@ -394,27 +394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "myweibo/Classes/Home/Model/HWStautsFrame.m"
-            timestampString = "472053183.008039"
+            timestampString = "472486657.310186"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "-sizeWithText:font:maxW:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "myweibo/Classes/Home/Model/HWStautsFrame.m"
-            timestampString = "472053183.008039"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "-setStatus:"
             landmarkType = "5">
          </BreakpointContent>
@@ -426,12 +410,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "myweibo/Classes/Home/Model/HWStautsFrame.m"
-            timestampString = "472053183.008039"
+            timestampString = "472486657.310186"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "-sizeWithText:font:maxW:"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "-setStatus:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -442,12 +426,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "myweibo/Classes/Home/View/HWStatusCell.m"
-            timestampString = "472056538.130424"
+            timestampString = "472487052.091378"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
-            landmarkName = "-setStatusFrame:"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
+            landmarkName = "+cellWithTableView:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -458,12 +442,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "myweibo/Classes/Home/View/HWStatusCell.m"
-            timestampString = "472056538.130424"
+            timestampString = "472487052.091378"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
-            landmarkName = "-setStatusFrame:"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "+cellWithTableView:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -486,7 +470,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "myweibo/Classes/Home/Controller/HMHomeTableViewController.m"
