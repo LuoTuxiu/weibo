@@ -15,6 +15,7 @@
 #import "HWStatusToolBar.h"
 //#import "HWStautsFrame.h"
 #import "NSString+Extension.h"
+#import "HWStatusPhotosView.h"
 @interface HWStatusCell()
 
 //原创微博整体
@@ -22,7 +23,7 @@
 //头像
 @property (nonatomic,weak) UIImageView *iconView;
 //配图
-@property (nonatomic,weak) UIImageView *photoView;
+@property (nonatomic,weak) HWStatusPhotosView *photosView;
 //会员图标
 @property (nonatomic,weak) UIImageView *vipView;
 //名称
@@ -39,7 +40,7 @@
 //转发微博正文+ 昵称
 @property (nonatomic,weak) UILabel *retweetlLabel;
 //配图
-@property (nonatomic,weak) UIImageView *retweetlphotoView;
+@property (nonatomic,weak) HWStatusPhotosView *retweetPhotosView;
 
 //工具条
 @property (nonatomic,weak) HWStatusToolBar *toolBarView;
@@ -100,9 +101,9 @@
     self.iconView=iconView;
     //        //配图
     //        @property (nonatomic,weak) UIImageView *photoView;
-    UIImageView *photoView = [[UIImageView alloc]init];
+    HWStatusPhotosView *photoView = [[HWStatusPhotosView alloc]init];
     [orginalView addSubview:photoView];
-    self.photoView=photoView;
+    self.photosView=photoView;
     //        //会员图标
     //        @property (nonatomic,weak) UIImageView *vipView;
     UIImageView *vipView = [[UIImageView alloc]init];
@@ -153,9 +154,9 @@
     
     //        //配图
     //        @property (nonatomic,weak) UIImageView *photoView;
-    UIImageView *retweetphotoView = [[UIImageView alloc]init];
+    HWStatusPhotosView *retweetphotoView = [[HWStatusPhotosView alloc]init];
     [self.retweetlView addSubview:retweetphotoView];
-    self.retweetlphotoView=retweetphotoView;
+    self.retweetPhotosView=retweetphotoView;
     
     //        //正文
     //        @property (nonatomic,weak) UILabel *contentLabel;
@@ -206,16 +207,17 @@
     //        @property (nonatomic,weak) UIImageView *photoView;
 //    UIImageView *photoView = [[UIImageView alloc]init];
 //    [orginalView addSubview:photoView];
-    self.photoView.frame=statusFrame.photoViewFrame;
+    self.photosView.frame=statusFrame.photoViewFrame;
 //    self.photoView.backgroundColor = [UIColor blueColor];
     if (status.pic_urls.count) {
         HWPhotos *photo = [status.pic_urls firstObject];
-            [self.photoView sd_setImageWithURL:[NSURL URLWithString:photo.thumbnail_pic] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
-        self.photoView.hidden= NO;
+        self.photosView.photos = status.pic_urls;
+//            [self.photosView sd_setImageWithURL:[NSURL URLWithString:photo.thumbnail_pic] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
+        self.photosView.hidden= NO;
     }
     else
     {
-        self.photoView.hidden = YES;
+        self.photosView.hidden = YES;
     }
 
 //    //        //会员图标
@@ -313,14 +315,15 @@
 
         //    self.photoView.backgroundColor = [UIColor blueColor];
         if (retweeted_status.pic_urls.count) {
-            self.retweetlphotoView.frame=statusFrame.retweetlphotoViewFrame;
+            self.retweetPhotosView.frame=statusFrame.retweetlphotoViewFrame;
             HWPhotos *retweetphoto = [retweeted_status.pic_urls firstObject];
-            [self.retweetlphotoView sd_setImageWithURL:[NSURL URLWithString:retweetphoto.thumbnail_pic] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
-            self.retweetlphotoView.hidden= NO;
+//            [self.retweetlphotoView sd_setImageWithURL:[NSURL URLWithString:retweetphoto.thumbnail_pic] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
+            self.retweetPhotosView.photos = retweeted_status.pic_urls;
+            self.retweetPhotosView.hidden= NO;
         }
         else
         {
-            self.retweetlphotoView.hidden = YES;
+            self.retweetPhotosView.hidden = YES;
         }
         
     }else

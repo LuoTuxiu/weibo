@@ -10,7 +10,9 @@
 #import "HWStatus.h"
 #import "HWUser.h"
 #import "NSString+Extension.h"
+#import "HWStatusPhotosView.h"
 @implementation HWStautsFrame
+
 
 -(void)setStatus:(HWStatus *)status
 {
@@ -78,10 +80,11 @@
     //    //配图
     //    @property (nonatomic,assign) CGRect photoViewFrame;
     if (status.pic_urls.count ) {//有配图
-        CGFloat photoWH = 100;
+//        CGFloat photoWH = 100;
         CGFloat photoX = HWStatusCellBorderW;
         CGFloat photoY = CGRectGetMaxY(self.contentLabelFrame) + HWStatusCellBorderW;
-        self.photoViewFrame = CGRectMake(photoX, photoY, photoWH, photoWH);
+        CGSize photoSize = [HWStatusPhotosView photoSizeWithCount:(int)status.pic_urls.count];
+        self.photoViewFrame = (CGRect){{photoX,photoY},photoSize};
         
          orgingalH  =  CGRectGetMaxY(self.photoViewFrame) + HWStatusCellBorderW;
     }
@@ -112,10 +115,11 @@
         self.retweetlLabelFrame = (CGRect){{retweetlabelX,retweetlabelY},contentLabelSize};
         //配图
         if (retweeted_status.pic_urls.count) {
-            CGFloat retweetphotoWH = 100;
+//            CGFloat retweetphotoWH = 100;
             CGFloat retweetphotoX = retweetlabelX;
             CGFloat retweetphotoY = CGRectGetMaxY(self.retweetlLabelFrame) + HWStatusCellBorderW;
-            self.retweetlphotoViewFrame = CGRectMake(retweetphotoX, retweetphotoY, retweetphotoWH, retweetphotoWH);
+            CGSize retweetPhotoSize = [HWStatusPhotosView photoSizeWithCount:(int)retweeted_status.pic_urls.count];
+            self.retweetlphotoViewFrame = (CGRect){{retweetphotoX,retweetphotoY},retweetPhotoSize};
 
 
         }

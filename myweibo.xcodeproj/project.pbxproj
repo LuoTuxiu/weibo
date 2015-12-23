@@ -81,6 +81,8 @@
 		3BBBF8701BE36B4000750484 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBBF8651BE36B4000750484 /* NSString+MJExtension.m */; };
 		3BD37FA01C20568E009DCDE7 /* HWLoadMoreFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD37F9F1C20568E009DCDE7 /* HWLoadMoreFooter.m */; };
 		3BD37FA21C2056D6009DCDE7 /* HWLoadMoreFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BD37FA11C2056D6009DCDE7 /* HWLoadMoreFooter.xib */; };
+		3BDAA5131C2AF42D0007736A /* HWStatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDAA5121C2AF42D0007736A /* HWStatusPhotosView.m */; };
+		3BDAA5161C2B05470007736A /* HWStatusSinglePhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDAA5151C2B05470007736A /* HWStatusSinglePhotoView.m */; };
 		F5511DCE1C253D830020538B /* HWStatusToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F5511DCD1C253D830020538B /* HWStatusToolBar.m */; };
 /* End PBXBuildFile section */
 
@@ -176,7 +178,6 @@
 		3B7550681C29841000A95CBA /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		3B75506A1C298E9700A95CBA /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		3B75506B1C298E9700A95CBA /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
-		3B75506D1C298F5700A95CBA /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3B7B30C31BE0614B001CF9EE /* HWTitleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTitleTableViewController.h; sourceTree = "<group>"; };
 		3B7B30C41BE0614B001CF9EE /* HWTitleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTitleTableViewController.m; sourceTree = "<group>"; };
 		3B7B30C61BE0A48F001CF9EE /* HWTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTabBar.h; sourceTree = "<group>"; };
@@ -252,6 +253,11 @@
 		3BD37F9E1C20568E009DCDE7 /* HWLoadMoreFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWLoadMoreFooter.h; sourceTree = "<group>"; };
 		3BD37F9F1C20568E009DCDE7 /* HWLoadMoreFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWLoadMoreFooter.m; sourceTree = "<group>"; };
 		3BD37FA11C2056D6009DCDE7 /* HWLoadMoreFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HWLoadMoreFooter.xib; sourceTree = "<group>"; };
+		3BDAA5111C2AF42D0007736A /* HWStatusPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWStatusPhotosView.h; sourceTree = "<group>"; };
+		3BDAA5121C2AF42D0007736A /* HWStatusPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWStatusPhotosView.m; sourceTree = "<group>"; };
+		3BDAA5141C2B05470007736A /* HWStatusSinglePhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWStatusSinglePhotoView.h; sourceTree = "<group>"; };
+		3BDAA5151C2B05470007736A /* HWStatusSinglePhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWStatusSinglePhotoView.m; sourceTree = "<group>"; };
+		3BDAA5171C2B08350007736A /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F5511DCC1C253D830020538B /* HWStatusToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWStatusToolBar.h; sourceTree = "<group>"; };
 		F5511DCD1C253D830020538B /* HWStatusToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWStatusToolBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -518,6 +524,10 @@
 				3B5734BF1C21A63300632AD7 /* HWStatusCell.m */,
 				F5511DCC1C253D830020538B /* HWStatusToolBar.h */,
 				F5511DCD1C253D830020538B /* HWStatusToolBar.m */,
+				3BDAA5111C2AF42D0007736A /* HWStatusPhotosView.h */,
+				3BDAA5121C2AF42D0007736A /* HWStatusPhotosView.m */,
+				3BDAA5141C2B05470007736A /* HWStatusSinglePhotoView.h */,
+				3BDAA5151C2B05470007736A /* HWStatusSinglePhotoView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -525,7 +535,7 @@
 		3B6B1E0D1BE0536D005E9896 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				3B75506D1C298F5700A95CBA /* PrefixHeader.pch */,
+				3BDAA5171C2B08350007736A /* PrefixHeader.pch */,
 				3B6B1E0E1BE0536D005E9896 /* AppDelegate.h */,
 				3B6B1E0F1BE0536D005E9896 /* AppDelegate.m */,
 				3B6B1E101BE0536D005E9896 /* Category */,
@@ -941,6 +951,7 @@
 				3BBBF83B1BE35AE300750484 /* SDWebImageCompat.m in Sources */,
 				3BBBF83D1BE35AE300750484 /* SDWebImageDownloader.m in Sources */,
 				3BBBF86D1BE36B4000750484 /* NSObject+MJCoding.m in Sources */,
+				3BDAA5131C2AF42D0007736A /* HWStatusPhotosView.m in Sources */,
 				3BBBF83E1BE35AE300750484 /* SDWebImageDownloaderOperation.m in Sources */,
 				3BBBF83C1BE35AE300750484 /* SDWebImageDecoder.m in Sources */,
 				F5511DCE1C253D830020538B /* HWStatusToolBar.m in Sources */,
@@ -977,6 +988,7 @@
 				3BA7486E1C22FF0C005A0F3F /* HWPhotos.m in Sources */,
 				3B5734C31C21AB2800632AD7 /* HWStautsFrame.m in Sources */,
 				3B2C8D6B1BE20D4B00589630 /* AFHTTPRequestOperationManager.m in Sources */,
+				3BDAA5161C2B05470007736A /* HWStatusSinglePhotoView.m in Sources */,
 				3BBBF8691BE36B4000750484 /* MJProperty.m in Sources */,
 				3B2C8D6E1BE20D4B00589630 /* AFSecurityPolicy.m in Sources */,
 				3B75506C1C298E9700A95CBA /* NSString+Extension.m in Sources */,

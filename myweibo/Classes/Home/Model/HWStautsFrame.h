@@ -17,6 +17,7 @@
 #define HWStatusCellBorderH 10
 #define HWStatusCellBorderW 10
 
+
 #import <Foundation/Foundation.h>
 @class HWStatus;
 @interface HWStautsFrame : NSObject
