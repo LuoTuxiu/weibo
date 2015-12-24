@@ -410,11 +410,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "myweibo/Classes/Home/View/HWStatusCell.m"
-            timestampString = "472577324.013298"
+            timestampString = "472660174.94434"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "+cellWithTableView:"
             landmarkType = "5">
          </BreakpointContent>
@@ -426,11 +426,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "myweibo/Classes/Home/View/HWStatusCell.m"
-            timestampString = "472577324.013298"
+            timestampString = "472660174.94434"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
             landmarkName = "+cellWithTableView:"
             landmarkType = "5">
          </BreakpointContent>

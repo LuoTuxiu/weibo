@@ -21,6 +21,7 @@
 		3B2C8D7D1BE2697500589630 /* MBProgressHUD+NJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C8D791BE2697500589630 /* MBProgressHUD+NJ.m */; };
 		3B2C8D7E1BE2697500589630 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B2C8D7A1BE2697500589630 /* MBProgressHUD.bundle */; };
 		3B2C8D7F1BE2697500589630 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C8D7C1BE2697500589630 /* MBProgressHUD.m */; };
+		3B40B8CE1C2C34B9009B8593 /* HWIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B40B8CD1C2C34B9009B8593 /* HWIconView.m */; };
 		3B524F0C1BE0CE750030D1C1 /* HWNewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B524F0B1BE0CE750030D1C1 /* HWNewFeatureViewController.m */; };
 		3B5734C01C21A63300632AD7 /* HWStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5734BF1C21A63300632AD7 /* HWStatusCell.m */; };
 		3B5734C31C21AB2800632AD7 /* HWStautsFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5734C21C21AB2800632AD7 /* HWStautsFrame.m */; };
@@ -132,6 +133,8 @@
 		3B2C8D7A1BE2697500589630 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		3B2C8D7B1BE2697500589630 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		3B2C8D7C1BE2697500589630 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		3B40B8CC1C2C34B9009B8593 /* HWIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWIconView.h; sourceTree = "<group>"; };
+		3B40B8CD1C2C34B9009B8593 /* HWIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWIconView.m; sourceTree = "<group>"; };
 		3B524F0A1BE0CE750030D1C1 /* HWNewFeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWNewFeatureViewController.h; sourceTree = "<group>"; };
 		3B524F0B1BE0CE750030D1C1 /* HWNewFeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWNewFeatureViewController.m; sourceTree = "<group>"; };
 		3B5734BE1C21A63300632AD7 /* HWStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWStatusCell.h; sourceTree = "<group>"; };
@@ -528,6 +531,8 @@
 				3BDAA5121C2AF42D0007736A /* HWStatusPhotosView.m */,
 				3BDAA5141C2B05470007736A /* HWStatusSinglePhotoView.h */,
 				3BDAA5151C2B05470007736A /* HWStatusSinglePhotoView.m */,
+				3B40B8CC1C2C34B9009B8593 /* HWIconView.h */,
+				3B40B8CD1C2C34B9009B8593 /* HWIconView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -963,6 +968,7 @@
 				3BBBF84D1BE35ED000750484 /* HWStatus.m in Sources */,
 				3B6B1E361BE0536D005E9896 /* HMDiscoverTableViewController.m in Sources */,
 				3B7B30C51BE0614B001CF9EE /* HWTitleTableViewController.m in Sources */,
+				3B40B8CE1C2C34B9009B8593 /* HWIconView.m in Sources */,
 				3BBBF8471BE35AE300750484 /* UIView+WebCacheOperation.m in Sources */,
 				3BBBF86C1BE36B4000750484 /* NSObject+MJClass.m in Sources */,
 				3BD37FA01C20568E009DCDE7 /* HWLoadMoreFooter.m in Sources */,

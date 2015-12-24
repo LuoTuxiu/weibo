@@ -19,6 +19,29 @@
         //这样子写可以保证UIImageView的尺寸和图片尺寸一样
         UIImageView *gitView  =  [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"timeline_image_gif"]];
         [self addSubview:gitView];
+        
+//        UIViewContentModeScaleToFill,//填充，将图片拉伸充满整个uiiamgeview
+//        UIViewContentModeScaleAspectFit,      //保持图片宽高比进行拉伸到宽或者高直到图片完全在里面 contents scaled to fit with fixed aspect. remainder is transparent
+//        UIViewContentModeScaleAspectFill,     // 保持图片宽高比进行起码拉伸到宽或者高contents scaled to fill with fixed aspect. some portion of content may be clipped.
+//        UIViewContentModeRedraw,              //调用setNeedsDisplay时候重画 redraw on bounds change (calls -setNeedsDisplay)
+//        UIViewContentModeCenter,              //居中显示，不会拉伸 contents remain same size. positioned adjusted.
+//        UIViewContentModeTop,
+//        UIViewContentModeBottom,
+//        UIViewContentModeLeft,
+//        UIViewContentModeRight,
+//        UIViewContentModeTopLeft,
+//        UIViewContentModeTopRight,
+//        UIViewContentModeBottomLeft,
+//        UIViewContentModeBottomRight,
+        //1.凡是带有Scale都会拉伸；
+//        2.凡是带有Aspect都会按照图片原来的宽高比；也就是图片不会变形；
+        
+        self.contentMode = UIViewContentModeScaleAspectFill;
+        //超出边框的内容就剪切掉
+        self.clipsToBounds = YES;
+        
+        
+        self.backgroundColor = [UIColor redColor];
         _gitView = gitView;
 //        gitView.image  = [UIImage imageNamed:]
     }

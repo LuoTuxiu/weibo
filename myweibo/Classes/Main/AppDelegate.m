@@ -78,7 +78,8 @@
 //    3.后台暂停状态：停止一切动画或者定时器、多媒体操作，很难再做其他操作
 //    4.后台运行状态；
     //这个方式是向操作系统申请后台运行的资格，能维持多久是不确定的
-    UIBackgroundTaskIdentifier task  = [application beginBackgroundTaskWithExpirationHandler:^{
+    //要加block，要不然endbackgroundTaks就会没有值；
+     __block UIBackgroundTaskIdentifier task  = [application beginBackgroundTaskWithExpirationHandler:^{
 //        当后台运行时间已近到了的时候，就会调用这个block
         [application endBackgroundTask:task];
     }];

@@ -16,12 +16,13 @@
 //#import "HWStautsFrame.h"
 #import "NSString+Extension.h"
 #import "HWStatusPhotosView.h"
+#import "HWIconView.h"
 @interface HWStatusCell()
 
 //原创微博整体
 @property (nonatomic,weak) UIView *originalView;
 //头像
-@property (nonatomic,weak) UIImageView *iconView;
+@property (nonatomic,weak) HWIconView *iconView;
 //配图
 @property (nonatomic,weak) HWStatusPhotosView *photosView;
 //会员图标
@@ -96,7 +97,7 @@
     self.originalView=orginalView;
     //        //头像
     //        @property (nonatomic,weak) UIImageView *iconView;
-    UIImageView *iconView = [[UIImageView alloc]init];
+    HWIconView *iconView = [[HWIconView alloc]init];
     [orginalView addSubview:iconView];
     self.iconView=iconView;
     //        //配图
@@ -201,6 +202,7 @@
     //        @property (nonatomic,weak) UIImageView *iconView;
 
     self.iconView.frame=statusFrame.iconViewFrame;
+    self.iconView.user  = user;
     
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:[UIImage imageNamed:@"avatar_default_small"]];
     //        //配图
