@@ -7,7 +7,7 @@
 //  处理账号相关的操作:存储账号
 
 #import <Foundation/Foundation.h>
-@class HWAccount;
+#import "HWAccount.h"
 @interface HWAccountTool : NSObject
 /**存储账号信息*/
 +(void)saveAccount:(HWAccount *)account;

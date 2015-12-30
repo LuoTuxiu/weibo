@@ -7,7 +7,7 @@
 //
 
 #import "HWAccountTool.h"
-#import "HWAccount.h"
+
 #define HWAccountPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject] stringByAppendingPathComponent:@"account.archive"]
 @implementation HWAccountTool
 
