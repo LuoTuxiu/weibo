@@ -165,44 +165,86 @@
 -(void)send
 {
     NSLog(@"send");
-    
-    //1.请求管理者
-    AFHTTPRequestOperationManager *mgr =  [AFHTTPRequestOperationManager manager];
-    
-    
-    //    mgr.responseSerializer = [AFJSONResponseSerializer serializer];
-    //AFN的AFJSONResponseSerializer默认不接受text/plain这种类型，所以我修改了源代码
-    
-    //2.拼接请求参数
-    NSMutableDictionary *params =  [NSMutableDictionary dictionary];
-    params[@"access_token"] = [HWAccountTool account].access_token;
-    params[@"status"] = self.textView.text;
-
-    NSLog(@"%@",self.photoView.addedPhotos);
-    //3.发送请求对象，只能是post请求
-//    [mgr POST:@"https://api.weibo.com/2/statuses/update.json" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, NSDictionary * responseObject) {
-//                NSLog(@"请求成功%@",responseObject);
-//        [MBProgressHUD showSuccess:@"发送成功"];
-//        
-//        
-//    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-//        NSLog(@"请求失败%@",error);
-//        [MBProgressHUD showError:@"发送失败"];
-//    }];
- 
-    //3.发送图片
-    [mgr POST:@"https://api.weibo.com/2/statuses/upload.json" parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-        UIImage *image = [self.photoView.addedPhotos firstObject];
-        NSData *data  = UIImageJPEGRepresentation(image, 1.0);
-        [formData appendPartWithFileData:data name:@"pic" fileName:@"test.jpg" mimeType:@"image/jpeg"];
-    } success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-        NSLog(@"请求成功%@",responseObject);
-        [MBProgressHUD showSuccess:@"发送成功"];
-    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-        NSLog(@"请求失败%@",error);
-        [MBProgressHUD showError:@"发送失败"];
-    }];
-     [self dismissViewControllerAnimated:YES completion:nil];
+    if (self.photoView.addedPhotos.count > 0) {
+        //1.请求管理者
+        AFHTTPRequestOperationManager *mgr =  [AFHTTPRequestOperationManager manager];
+        
+        
+        //    mgr.responseSerializer = [AFJSONResponseSerializer serializer];
+        //AFN的AFJSONResponseSerializer默认不接受text/plain这种类型，所以我修改了源代码
+        
+        //2.拼接请求参数
+        NSMutableDictionary *params =  [NSMutableDictionary dictionary];
+        params[@"access_token"] = [HWAccountTool account].access_token;
+        params[@"status"] = self.textView.text;
+        
+        NSLog(@"%@",self.photoView.addedPhotos);
+        //3.发送请求对象，只能是post请求
+        //    [mgr POST:@"https://api.weibo.com/2/statuses/update.json" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, NSDictionary * responseObject) {
+        //                NSLog(@"请求成功%@",responseObject);
+        //        [MBProgressHUD showSuccess:@"发送成功"];
+        //
+        //
+        //    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+        //        NSLog(@"请求失败%@",error);
+        //        [MBProgressHUD showError:@"发送失败"];
+        //    }];
+        
+        //3.发送图片的url
+        [mgr POST:@"https://api.weibo.com/2/statuses/upload.json" parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+            UIImageView *imageView = [self.photoView.addedPhotos firstObject];
+//            NSData *data  = UIImageJPEGRepresentation(image, 1.0);
+            NSData *data = UIImagePNGRepresentation(imageView.image);
+            [formData appendPartWithFileData:data name:@"pic" fileName:@"test.jpg" mimeType:@"image/jpeg"];
+        } success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+            NSLog(@"请求成功%@",responseObject);
+            [MBProgressHUD showSuccess:@"发送成功"];
+        } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+            NSLog(@"请求失败%@",error);
+            [MBProgressHUD showError:@"发送失败"];
+        }];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        //没有图片的发送微博
+        //1.请求管理者
+        AFHTTPRequestOperationManager *mgr =  [AFHTTPRequestOperationManager manager];
+        
+        
+        //    mgr.responseSerializer = [AFJSONResponseSerializer serializer];
+        //AFN的AFJSONResponseSerializer默认不接受text/plain这种类型，所以我修改了源代码
+        
+        //2.拼接请求参数
+        NSMutableDictionary *params =  [NSMutableDictionary dictionary];
+        params[@"access_token"] = [HWAccountTool account].access_token;
+        params[@"status"] = self.textView.text;
+        
+        NSLog(@"%@",self.photoView.addedPhotos);
+//        3.发送请求对象，只能是post请求
+            [mgr POST:@"https://api.weibo.com/2/statuses/update.json" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, NSDictionary * responseObject) {
+                        NSLog(@"请求成功%@",responseObject);
+                [MBProgressHUD showSuccess:@"发送成功"];
+        
+        
+            } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+                NSLog(@"请求失败%@",error);
+                [MBProgressHUD showError:@"发送失败"];
+            }];
+        
+//        //3.发送图片的url
+//        [mgr POST:@"https://api.weibo.com/2/statuses/upload.json" parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+//            UIImage *image = [self.photoView.addedPhotos firstObject];
+//            NSData *data  = UIImageJPEGRepresentation(image, 1.0);
+//            [formData appendPartWithFileData:data name:@"pic" fileName:@"test.jpg" mimeType:@"image/jpeg"];
+//        } success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+//            NSLog(@"请求成功%@",responseObject);
+//            [MBProgressHUD showSuccess:@"发送成功"];
+//        } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+//            NSLog(@"请求失败%@",error);
+//            [MBProgressHUD showError:@"发送失败"];
+//        }];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+   
 }
 
 
@@ -304,6 +346,8 @@
     [self presentViewController:ipc animated:YES completion:nil];
 }
 
+
+//拍照后或者选择图片后就调用
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
     //info中包含了选择的图片
