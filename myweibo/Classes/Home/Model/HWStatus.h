@@ -13,6 +13,7 @@
 @property (nonatomic,copy) NSString *idstr;
 
 @property (nonatomic,copy) NSString *text;
+@property (nonatomic,copy) NSAttributedString *attributedText;
 
 @property (nonatomic,strong) HWUser *user;
 //微博创建时间

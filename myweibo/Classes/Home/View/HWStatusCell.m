@@ -274,7 +274,10 @@
 //    UILabel *contentLabel = [[UILabel alloc]init];
 //    [orginalView addSubview:contentLabel];
 //    self.contentLabel=contentLabel;
-    self.contentLabel.text = status.text;
+    
+//    NSAttributedString *attributedString
+    self.contentLabel.attributedText = status.attributedText;
+//    self.contentLabel.text = status.text;
 //    NSLog(@"%@",status.text);
     self.contentLabel.frame=statusFrame.contentLabelFrame;
 //    NSLog(@"%@",NSStringFromCGRect(self.contentLabel.frame));

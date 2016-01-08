@@ -17,6 +17,15 @@
     return @{@"pic_urls":[HWPhotos class]};
 }
 
+-(void)setText:(NSString *)text
+{
+    _text = [text copy];
+    //利用text生成attributedText
+    NSMutableAttributedString *attributeText = [[NSMutableAttributedString alloc]initWithString:text];
+    [attributeText addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(0, 1)];
+    self.attributedText = attributeText;
+}
+
 //重写getter方法
 -(NSString *)created_at
 {
